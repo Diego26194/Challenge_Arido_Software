@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { List, ListItem, ListItemText, Typography, Container, CircularProgress } from "@mui/material";
+import { List, ListItem, ListItemText, Typography, Container, CircularProgress, Paper } from "@mui/material";
+
+
 
 
 interface Post {
@@ -30,7 +32,7 @@ const PostList = () => {
     <Container>
       <Typography variant="h4" gutterBottom>Lista de Posts</Typography>
       {loading ? <CircularProgress /> : (
-        <List>
+        <List component={Paper} sx={{ bgcolor: "background.paper" }}>
           {posts.map((post) => (
             <ListItem key={post.id} divider>
               <ListItemText primary={post.title} secondary={post.body} />
