@@ -73,7 +73,7 @@ function useFetchUserById(userId: number) {
   return { data, loading, error };
 }
 
-// Function to get the comments of a post by the post ID
+// Function to get the comments by ID
 function useFetchCommentsByPostId(postId: number) {
   const [data, setData] = useState<Comment[] | null>(null);
   const [loading, setLoading] = useState(false);

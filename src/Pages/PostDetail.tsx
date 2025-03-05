@@ -1,14 +1,17 @@
 import { useParams } from "react-router-dom";
 import { Container, Typography, CircularProgress, List, Paper } from "@mui/material";
-import ItemComment from "../../Components/ItemComment";
-import { useFetchPosts, useFetchUserById, useFetchCommentsByPostId } from "../../Functions/DataManaggement";
+import ItemComment from "../Components/ItemComment";
+import { useFetchPosts, useFetchUserById, useFetchCommentsByPostId } from "../Functions/DataManaggement";
 
 
 const PostDetail = () => {
   const { id } = useParams<{ id: string }>(); 
 
+  //Function to get the posts
   const { data: posts, loading: loadingPost, error: errorPost } = useFetchPosts("https://jsonplaceholder.typicode.com/posts");
+  // Function to get a user by ID
   const { data: user, loading: loadingUser, error: errorUser } = useFetchUserById(Number(id));
+  // Function to get the comments by ID
   const { data: comments, loading: loadingComments, error: errorComments } = useFetchCommentsByPostId(Number(id));
 
   // Find post for id
