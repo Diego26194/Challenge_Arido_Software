@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { List, ListItem, ListItemText, Typography, Container, CircularProgress } from "@mui/material";
 
-//  Datos a usar
+
 interface Post {
   id: number;
   title: string;
@@ -10,10 +10,10 @@ interface Post {
 }
 
 const PostList = () => {
-  //  Estados
+
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
-
+  //search the post for IP
   useEffect(() => {
     axios.get<Post[]>("https://jsonplaceholder.typicode.com/posts")
       .then((response) => {
