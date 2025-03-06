@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Container, Typography, CircularProgress, List, Paper } from "@mui/material";
 import ItemComment from "../Components/ItemComment";
-import { useFetchPosts, useFetchUserById, useFetchCommentsByPostId } from "../Functions/DataManaggement";
+import { useFetchPosts, useFetchUserById, useFetchCommentsByPostId } from "../Functions/DataManagement";
 
 
 const PostDetail = () => {

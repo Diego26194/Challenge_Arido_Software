@@ -15,7 +15,6 @@ function App() {
 <Router>
   <ToolBar LinkHome="/" />
 
-  {/* Contenido de la aplicación */}
   <Box sx={{ marginTop: "64px", padding: "16px" }}>
     <Routes>
       <Route path="/" element={<PostList />} />
