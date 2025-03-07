@@ -11,7 +11,7 @@ interface PostProps {
   onDelete: (id: number) => void;
 }
 
-function ItemPost({ post, onUpdate, onDelete }: PostProps) {
+function ItemPost({ post }: PostProps) {
   return (
     <Container>
       <ListItem key={post.id} divider >

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Container, Typography, CircularProgress, List, Paper, Box } from "@mui/material";
-import ItemComment from "../Components/ItemComment";
+import ItemComment from "../Components/Elements/ItemComment";
 import { useFetchPosts, useFetchUserById, useFetchCommentsByPostId } from "../Functions/DataManagement";
 
 
