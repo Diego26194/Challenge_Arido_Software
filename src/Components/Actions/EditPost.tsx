@@ -3,6 +3,7 @@ import axios from "axios";
 import { Dialog, DialogTitle, DialogContent, DialogActions, TextField, Button } from "@mui/material";
 import ButtonEdit from "../Elements/ButtonEdit"; 
 
+// Update values ​​if the selected post changes
 export interface Post {
   id: number;
   title: string;

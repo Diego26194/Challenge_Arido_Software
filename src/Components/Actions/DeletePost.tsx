@@ -9,12 +9,13 @@ interface DeletePostProps {
   onUpdate: (updatedPosts: any[]) => void;
 }
 
+// post deletion logic
 const DeletePost = ({ posts, post, apiUrl, onUpdate }: DeletePostProps) => {
   const handleDelete = async () => {
     try {
       await axios.delete(`${apiUrl}/${post.id}`);
 
-      
+      // Filter the deleted post from the list of posts
       const updatedPosts = posts.filter((p) => p.id !== post.id);
       onUpdate(updatedPosts);
     } catch (error) {

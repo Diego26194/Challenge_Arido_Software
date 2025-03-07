@@ -12,18 +12,18 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-<Router>
-  <ToolBar LinkHome="/Challenge_Arido_Software/" />
+    <Router>
+      <ToolBar LinkHome="/Challenge_Arido_Software/" />
 
-  <Box sx={{ marginTop: "64px", padding: "16px" }}>
-    <Routes>
-      <Route path="/Challenge_Arido_Software/" element={<PostList />} />
-      <Route path="/Challenge_Arido_Software/posts/:id" element={<PostDetail />} />
-    </Routes>
-  </Box>
-</Router>
-</ThemeProvider>
-  );
-}
+      <Box sx={{ marginTop: "64px", padding: "16px" }}>
+        <Routes>
+          <Route path="/Challenge_Arido_Software/" element={<PostList />} />
+          <Route path="/Challenge_Arido_Software/posts/:id" element={<PostDetail />} />
+        </Routes>
+      </Box>
+    </Router>
+    </ThemeProvider>
+      );
+    }
 
 export default App;

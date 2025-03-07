@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, Button, CircularProgress,} from "@mui/material";
 import axios from "axios";
 
+// Defining AddPost Component Properties
 interface AddPostProps {
   open: boolean;
   onClose: () => void;
@@ -15,9 +16,11 @@ const AddPost: React.FC<AddPostProps> = ({ open, onClose, posts, apiUrl, onUpdat
   const [body, setBody] = useState("");
   const [loading, setLoading] = useState(false);
 
+  //Handles the post saving and updating logic
   const handleSave = async () => {
     if (!title || !body) return;
 
+    //Logic to generate a new ID based on the last post
     const newId = posts.reduce((max, post) => (post.id > max ? post.id : max), 0) + 1;
     const newPost = { id: newId, title, body };
 
@@ -25,6 +28,8 @@ const AddPost: React.FC<AddPostProps> = ({ open, onClose, posts, apiUrl, onUpdat
 
     try {
       await axios.post(apiUrl, newPost); 
+
+      //Updates the list of posts in the component state
       onUpdate((prevPosts) => [...prevPosts, newPost]); 
       setTitle("");
       setBody("");

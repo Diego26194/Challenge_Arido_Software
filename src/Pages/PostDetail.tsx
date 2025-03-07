@@ -29,11 +29,11 @@ const PostDetail = () => {
 
   return (
     <Container>
-      <Box sx={{ backgroundColor: "#B9C29E", p: 2, borderRadius: 2 }} >
-        <Typography variant="h3" gutterBottom >{post?.title} </Typography>
-        <Typography variant="subtitle1" color="textSecondary">Autor: {user?.name}</Typography>
-        <Typography paragraph>{post?.body}</Typography>
-      </Box>
+        
+          <Typography variant="h3" gutterBottom >{post?.title} </Typography>
+          <Typography variant="subtitle1" color="textSecondary" >Autor: {user?.name}</Typography>
+          <Typography paragraph>{post?.body}</Typography>
+        
 
       <Typography variant="h5" gutterBottom>Comentarios</Typography>
       <List component={Paper} sx={{ bgcolor: "background.paper" }}>
