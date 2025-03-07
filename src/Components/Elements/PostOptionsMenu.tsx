@@ -17,6 +17,7 @@ const PostOptionsMenu = ({ posts, post, apiUrl, onUpdate }: PostOptionsMenuProps
   const [editOpen, setEditOpen] = useState(false);
   const open = Boolean(anchorEl);
 
+  // Handle click on the menu icon to open it
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -25,11 +26,13 @@ const PostOptionsMenu = ({ posts, post, apiUrl, onUpdate }: PostOptionsMenuProps
     setAnchorEl(null);
   };
 
+  // Open the edit modal and close the menu
   const handleEditClick = () => {
     setEditOpen(true);
     handleClose();
   };
 
+  // Handles the logic for deleting a post
   const handleDeleteClick = async () => {
     handleClose(); 
 
