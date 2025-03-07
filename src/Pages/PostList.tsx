@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { List, ListItem, ListItemText, Typography, Container, CircularProgress, Paper, Button,} from "@mui/material";
 import { useFetchPosts } from "../Functions/DataManagement";
-import SearchBar from "../Components/SearchBar";
+import SearchBar from "../Components/Elements/SearchBar";
 import { Link } from "react-router-dom";
 import PostOptionsMenu from "../Components/Elements/PostOptionsMenu";
 import AddPost from "../Components/Actions/AddPost";
