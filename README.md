@@ -31,16 +31,6 @@ JSONPlaceholder como API de dato
 
   ► npm install
 
-### Instala Vite en el proyecto:
-
-Si no has configurado Vite, instálalo con el siguiente comando:
-
-  ► npm create vite@latest
-
-### Instala Material UI, Axios y React Router:
-
-Ejecuta los siguientes comandos para instalar las dependencias necesarias:
-
   ► npm install @mui/material @mui/icons-material axios react-router-dom
 
 ### Inicia la aplicación en modo desarrollo:
@@ -61,3 +51,7 @@ Este proyecto utiliza la API pública estática JSONPlaceholder para obtener y m
 ### Soluciones y mejoras planeadas:
 
 Para mejorar la funcionalidad y la persistencia de los datos, se planea implementar una API propia conectada a una base de datos, como MongoDB o PostgreSQL, que permita almacenar y recuperar publicaciones, comentarios y usuarios en tiempo real. Con esta mejora, los datos creados, editados o eliminados se mantendrán incluso después de recargar la página o navegar entre vistas, y se podrá asociar correctamente el autor y los comentarios de cada publicación, eliminando los errores actuales y garantizando una gestión adecuada de la información.
+
+## Paleta de Colores utilizada
+
+https://coolors.co/b9c29e-d4dbb5-dbe1bc-e9edc9-d4a373
