@@ -3,8 +3,8 @@ import { List, ListItem, ListItemText, Typography, Container, CircularProgress, 
 import { useFetchPosts } from "../Functions/DataManagement";
 import SearchBar from "../Components/SearchBar";
 import { Link } from "react-router-dom";
-import PostOptionsMenu from "../Components/PostOptionsMenu";
-import AddPost from "../Components/AddPost";
+import PostOptionsMenu from "../Components/Elements/PostOptionsMenu";
+import AddPost from "../Components/Actions/AddPost";
 
 interface Post {
   id: number;
@@ -58,7 +58,7 @@ const PostList = () => {
               <Link to={`/posts/${post.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <ListItemText 
                   primary={post.title} 
-                  secondary={post.body.substring(0, 100) + "..."} 
+                  secondary={post.body.length > 100 ? post.body.substring(0, 100) + "..." : post.body} 
                 />
               </Link>
               

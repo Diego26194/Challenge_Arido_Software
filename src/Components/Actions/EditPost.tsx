@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Dialog, DialogTitle, DialogContent, DialogActions, TextField, Button } from "@mui/material";
-import ButtonEdit from "./ButtonEdit"; 
+import ButtonEdit from "../Elements/ButtonEdit"; 
 
 export interface Post {
   id: number;

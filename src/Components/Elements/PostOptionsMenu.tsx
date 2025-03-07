@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IconButton, Menu } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import EditPost from "./EditPost";
+import EditPost from "../Actions/EditPost";
 import ButtonEdit from "./ButtonEdit";
 import ButtonDelete from "./ButtonDelete";
 
