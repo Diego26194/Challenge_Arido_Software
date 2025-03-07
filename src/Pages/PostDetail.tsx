@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Container, Typography, CircularProgress, List, Paper } from "@mui/material";
+import { Container, Typography, CircularProgress, List, Paper, Box } from "@mui/material";
 import ItemComment from "../Components/ItemComment";
 import { useFetchPosts, useFetchUserById, useFetchCommentsByPostId } from "../Functions/DataManagement";
 
@@ -29,9 +29,11 @@ const PostDetail = () => {
 
   return (
     <Container>
-      <Typography variant="h4" gutterBottom>{post?.title}</Typography>
-      <Typography variant="subtitle1" color="textSecondary">Autor: {user?.name}</Typography>
-      <Typography paragraph>{post?.body}</Typography>
+      <Box sx={{ backgroundColor: "#B9C29E", p: 2, borderRadius: 2 }} >
+        <Typography variant="h4" gutterBottom>{post?.title}</Typography>
+        <Typography variant="subtitle1" color="textSecondary">Autor: {user?.name}</Typography>
+        <Typography paragraph>{post?.body}</Typography>
+      </Box>
 
       <Typography variant="h5" gutterBottom>Comentarios</Typography>
       <List component={Paper} sx={{ bgcolor: "background.paper" }}>

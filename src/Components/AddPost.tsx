@@ -1,43 +1,34 @@
-import { Dialog, DialogActions, DialogContent, DialogTitle, Button, TextField, CircularProgress } from "@mui/material";
 import { useState } from "react";
+import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, Button, CircularProgress,} from "@mui/material";
 import axios from "axios";
 
 interface AddPostProps {
-    open: boolean;
-    onClose: () => void;
-    posts: any[];
-    apiUrl: string;
-    onUpdate: (updater: (prevPosts: any[]) => any[]) => void; 
-  }
+  open: boolean;
+  onClose: () => void;
+  posts: any[];
+  apiUrl: string;
+  onUpdate: (updater: (prevPosts: any[]) => any[]) => void;
+}
 
-const AddPost = ({ open, onClose, posts, apiUrl, onUpdate }: AddPostProps) => {
+const AddPost: React.FC<AddPostProps> = ({ open, onClose, posts, apiUrl, onUpdate }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSave = async () => {
-    
     if (!title || !body) return;
 
-    
     const newId = posts.reduce((max, post) => (post.id > max ? post.id : max), 0) + 1;
-
-    
     const newPost = { id: newId, title, body };
 
     setLoading(true);
 
     try {
-      
-      await axios.post(apiUrl, newPost);
-
-      
-      onUpdate((prevPosts) => [...prevPosts, newPost]);
-
-      
+      await axios.post(apiUrl, newPost); 
+      onUpdate((prevPosts) => [...prevPosts, newPost]); 
       setTitle("");
       setBody("");
-      onClose(); 
+      onClose();
     } catch (error) {
       console.error("Error al agregar el post", error);
     } finally {
@@ -46,7 +37,7 @@ const AddPost = ({ open, onClose, posts, apiUrl, onUpdate }: AddPostProps) => {
   };
 
   return (
-    <Dialog open={open} onClose={onClose}>
+    <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
       <DialogTitle>Agregar Nuevo Post</DialogTitle>
       <DialogContent>
         <TextField
@@ -59,7 +50,7 @@ const AddPost = ({ open, onClose, posts, apiUrl, onUpdate }: AddPostProps) => {
         />
         <TextField
           margin="dense"
-          label="Cuerpo"
+          label="Contenido"
           fullWidth
           multiline
           rows={4}
@@ -68,10 +59,8 @@ const AddPost = ({ open, onClose, posts, apiUrl, onUpdate }: AddPostProps) => {
         />
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose} color="primary">
-          Cancelar
-        </Button>
-        <Button onClick={handleSave} color="primary" disabled={loading}>
+        <Button onClick={onClose} disabled={loading}>Cancelar</Button>
+        <Button onClick={handleSave} disabled={loading} variant="contained">
           {loading ? <CircularProgress size={24} /> : "Guardar"}
         </Button>
       </DialogActions>
