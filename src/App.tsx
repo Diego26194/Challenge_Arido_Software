@@ -13,11 +13,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 <Router>
-  <ToolBar LinkHome="/" />
+  <ToolBar LinkHome="/Challenge_Arido_Software/" />
 
   <Box sx={{ marginTop: "64px", padding: "16px" }}>
     <Routes>
-      <Route path="/Challenge_Arido_Software" element={<PostList />} />
+      <Route path="/Challenge_Arido_Software/" element={<PostList />} />
       <Route path="/Challenge_Arido_Software/posts/:id" element={<PostDetail />} />
     </Routes>
   </Box>

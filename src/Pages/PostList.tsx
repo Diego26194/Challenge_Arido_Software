@@ -55,7 +55,7 @@ const PostList = () => {
               />
             }
             >
-              <Link to={`/posts/${post.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link to={`/Challenge_Arido_Software/posts/${post.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <ListItemText 
                   primary={post.title} 
                   secondary={post.body.length > 100 ? post.body.substring(0, 100) + "..." : post.body} 
