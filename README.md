@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+## URL:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://diego26194.github.io/Challenge_Arido_Software/
 
-Currently, two official plugins are available:
+## Descripcion:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto es una aplicación web construida con React y Material UI que permite visualizar, buscar y gestionar publicaciones de la API pública JSONPlaceholder. En la página principal, los usuarios pueden ver el título y un fragmento de cada publicación, agregar nuevas, y editarlas o eliminarlas mediante un menú desplegable. Al hacer clic en una publicación, se redirige a una página de detalles donde se muestra el contenido completo, el autor y los comentarios. Además, la barra de herramientas superior permite regresar a la página principal.
 
-## Expanding the ESLint configuration
+## Tecnologías utilizadas:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+React con Vite
+Material UI para el diseño
+React Router para la navegación
+Axios para el consumo de la API
+JSONPlaceholder como API de dato
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Instalación y ejecución local
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Clona el repositorio:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+  ► git clone https://github.com/tu-usuario/tu-repositorio.git
+  
+### Ingresa al directorio del proyecto:
+
+  ► cd tu-repositorio
+
+### Instala las dependencias:
+
+(Asegúrate de tener Node.js instalado. Si no lo tienes, puedes descargarlo desde " https://nodejs.org/es " )
+
+  ► npm install
+
+### Instala Vite en el proyecto:
+
+Si no has configurado Vite, instálalo con el siguiente comando:
+
+  ► npm create vite@latest
+
+### Instala Material UI, Axios y React Router:
+
+Ejecuta los siguientes comandos para instalar las dependencias necesarias:
+
+  ► npm install @mui/material @mui/icons-material axios react-router-dom
+
+### Inicia la aplicación en modo desarrollo:
+
+ ► npm run dev
+  
+Este comando a parte de inicializar la app mostrara la URL para visualizar la pagina
